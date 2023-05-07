@@ -1,0 +1,55 @@
+# (*To dockerization this app*)
+#<---------------------------->
+# base image
+FROM openjdk:17   
+
+# Create app directory
+# Copy all folders in this project to docker fiels
+COPY . .
+
+to build kafka
+docker-compose up
+********************
+# define network port
+/----------------------------------------------------------->
+To build customer and marketer Images .
+docker build -t customer--image .
+docker build -t marketer--image .
+------------------------>
+To Run Containers .
+
+docker run --name customer--service -p 8081:8081 --network kafka-net customer--image
+docker run --name marketer--service -p 8080:8080 --network kafka-net marketer--image
+docker run -- name mysql-container  --network kafka-net -e MSQL_ROOT_PASSWORD=1234 -d -p 3306: 3306 mysql:5.7
+
+---------------------------------------------------------------->
+To Run Database .
+docker exec -it bfdf3c bash
+mysql  -uroot -p1234
+------------------------------------->
+CRUD From Database;
+
+select * from offer;
+INSERT INTO offer (amount,deleted,end_date,item,updated) VALUES (300,false,"2023-11-7","mac",false);
+DELETE FROM offer where id=19;
+UPDATE offer SET item="Watch" where id=18;
+
+------------------------------------------>
+
+Postman Urls.
+
+https://localhost:8080/marketer/publishOffer----------------->post
+https://localhost:8081/customer/getAllOffers----------------->get
+https://localhost:8081/customer/offers/1------------------>get
+https://localhost:8081/customer/1---------------->Delete
+https://localhost:8081/customer/deleteOffer--------->Delete in body
+https://localhost:8080/marketer/DeleteOffer--------------> deletedid("deleteId": 16,)
+
+
+
+
+----------------------------------------------------------------->
+<<Contant>>
+    "item":"Bag",
+    "amount":"20000.0",
+    "endDate":"2023-10-7"

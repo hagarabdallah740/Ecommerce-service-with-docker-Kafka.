@@ -1,0 +1,213 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=11640, tid=3388
+#
+# JRE version:  (20.0.1+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (20.0.1+9-29, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dmaven.multiModuleProjectDirectory=D:\Customer -Djansi.passthrough=true -Dmaven.home=C:\Users\hp\.m2\wrapper\dists\apache-maven-3.8.7-bin\1ktonn2lleg549uah6ngl1r74r\apache-maven-3.8.7 -Dclassworlds.conf=C:\Users\hp\.m2\wrapper\dists\apache-maven-3.8.7-bin\1ktonn2lleg549uah6ngl1r74r\apache-maven-3.8.7\bin\m2.conf -Dmaven.ext.class.path=C:\Users\hp\IntelliJ IDEA Community Edition 2023.1\plugins\maven\lib\maven-event-listener.jar -javaagent:C:\Users\hp\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=49248:C:\Users\hp\IntelliJ IDEA Community Edition 2023.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 org.codehaus.classworlds.Launcher -Didea.version=2023.1 clean
+
+Host: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2546)
+Time: Sat Apr 22 22:03:55 2023 Pacific Daylight Time elapsed time: 0.075170 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001d9351b6e60):  JavaThread "Unknown thread" [_thread_in_vm, id=3388, stack(0x000000155cf00000,0x000000155d000000)]
+
+Stack: [0x000000155cf00000,0x000000155d000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6bb95a]
+V  [jvm.dll+0x8485fa]
+V  [jvm.dll+0x84a1f5]
+V  [jvm.dll+0x84a8f3]
+V  [jvm.dll+0x280b0f]
+V  [jvm.dll+0xbcec5]
+V  [jvm.dll+0x329165]
+V  [jvm.dll+0x81128a]
+V  [jvm.dll+0x3c0d91]
+V  [jvm.dll+0x7fcfe3]
+V  [jvm.dll+0x44c76f]
+V  [jvm.dll+0x44e0e1]
+C  [jli.dll+0x5287]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fffc65ca098, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000001d9351b6e60 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3388, stack(0x000000155cf00000,0x000000155d000000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.008 Loaded shared library C:\Users\hp\.jdks\openjdk-20.0.1\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff652220000 - 0x00007ff65222e000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\java.exe
+0x00007ff815bf0000 - 0x00007ff815de8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff800420000 - 0x00007ff800439000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007ff815090000 - 0x00007ff81514f000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff813930000 - 0x00007ff813c02000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff813440000 - 0x00007ff813540000 	C:\Windows\System32\ucrtbase.dll
+0x00007fffe2560000 - 0x00007fffe257b000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\VCRUNTIME140.dll
+0x00007ffffe2e0000 - 0x00007ffffe2f7000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\jli.dll
+0x00007ff815750000 - 0x00007ff8158f1000 	C:\Windows\System32\USER32.dll
+0x00007ffff8e90000 - 0x00007ffff912a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff813c10000 - 0x00007ff813c32000 	C:\Windows\System32\win32u.dll
+0x00007ff814660000 - 0x00007ff8146fe000 	C:\Windows\System32\msvcrt.dll
+0x00007ff815060000 - 0x00007ff81508b000 	C:\Windows\System32\GDI32.dll
+0x00007ff813600000 - 0x00007ff81370f000 	C:\Windows\System32\gdi32full.dll
+0x00007ff8132f0000 - 0x00007ff81338d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff813c40000 - 0x00007ff813c70000 	C:\Windows\System32\IMM32.DLL
+0x00007ff809980000 - 0x00007ff80998c000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\vcruntime140_1.dll
+0x00007fffd61f0000 - 0x00007fffd627e000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\msvcp140.dll
+0x00007fffc5a70000 - 0x00007fffc6707000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\server\jvm.dll
+0x00007ff815570000 - 0x00007ff81561e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff815b10000 - 0x00007ff815bac000 	C:\Windows\System32\sechost.dll
+0x00007ff815620000 - 0x00007ff815744000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffff95c0000 - 0x00007ffff95c9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffff1420000 - 0x00007ffff1447000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff807fd0000 - 0x00007ff807fda000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff8159b0000 - 0x00007ff815a1b000 	C:\Windows\System32\WS2_32.dll
+0x00007ff811200000 - 0x00007ff811212000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffffcd80000 - 0x00007ffffcd8a000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\jimage.dll
+0x00007ff810f20000 - 0x00007ff811104000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff80d750000 - 0x00007ff80d785000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff813710000 - 0x00007ff813792000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffffe1f0000 - 0x00007ffffe1fe000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\instrument.dll
+0x00007fffdc420000 - 0x00007fffdc446000 	C:\Users\hp\.jdks\openjdk-20.0.1\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\hp\.jdks\openjdk-20.0.1\bin;C:\Windows\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\hp\.jdks\openjdk-20.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=D:\Customer -Djansi.passthrough=true -Dmaven.home=C:\Users\hp\.m2\wrapper\dists\apache-maven-3.8.7-bin\1ktonn2lleg549uah6ngl1r74r\apache-maven-3.8.7 -Dclassworlds.conf=C:\Users\hp\.m2\wrapper\dists\apache-maven-3.8.7-bin\1ktonn2lleg549uah6ngl1r74r\apache-maven-3.8.7\bin\m2.conf -Dmaven.ext.class.path=C:\Users\hp\IntelliJ IDEA Community Edition 2023.1\plugins\maven\lib\maven-event-listener.jar -javaagent:C:\Users\hp\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=49248:C:\Users\hp\IntelliJ IDEA Community Edition 2023.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: org.codehaus.classworlds.Launcher -Didea.version=2023.1 clean
+java_class_path (initial): C:\Users\hp\.m2\wrapper\dists\apache-maven-3.8.7-bin\1ktonn2lleg549uah6ngl1r74r\apache-maven-3.8.7\boot\plexus-classworlds-2.6.0.jar;C:\Users\hp\.m2\wrapper\dists\apache-maven-3.8.7-bin\1ktonn2lleg549uah6ngl1r74r\apache-maven-3.8.7\boot\plexus-classworlds.license
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2097152000                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+     bool PerfDisableSharedMem                     = true                                      {product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2097152000                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\libnvvp;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Mozart\bin;C:\Program Files\Mozart\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\NetCDF4Excel;C:\Program Files\NVIDIA Corporation\Nsight Compute 2022.4.0\;C:\Program Files\Docker\Docker\resources\bin;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Azure Data Studio\bin;C:\Users\hp\.dotnet\tools;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=hp
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 166 Stepping 0, GenuineIntel
+TMP=C:\Users\hp\AppData\Local\Temp
+TEMP=C:\Users\hp\AppData\Local\Temp
+
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.2546)
+OS uptime: 0 days 4:58 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 166 stepping 0 microcode 0xe0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, hv, rdtscp, f16c
+
+Memory: 4k page, system-wide physical 7996M (386M free)
+TotalPageFile size 11939M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 17M, peak: 18M
+
+vm_info: OpenJDK 64-Bit Server VM (20.0.1+9-29) for windows-amd64 JRE (20.0.1+9-29), built on 2023-03-07T13:56:11Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.

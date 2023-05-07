@@ -1,0 +1,23 @@
+server:
+  port: 8081
+topic :
+  name: t.offer
+
+
+spring:
+  kafka:
+    consumer :
+      group-id: "default"
+      bootstrap-servers: 'kafka:29092'
+
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url : jdbc:mysql://mysql-container:3306/offer_db?useSSL=false
+    username : root
+    password : 1234
+
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
+    hibernate.ddl-auto: update

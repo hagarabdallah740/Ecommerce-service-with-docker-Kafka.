@@ -1,0 +1,9 @@
+server:
+  port: 8080
+topic :
+  name: t.offer
+
+
+spring:
+  kafka:
+      bootstrap-servers: 'kafka:29092'
